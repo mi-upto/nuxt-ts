@@ -25,7 +25,7 @@ const config: Configuration = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/scss/reset.scss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -49,6 +49,7 @@ const config: Configuration = {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
   ],
   /*
    ** Axios module configuration
@@ -62,6 +63,13 @@ const config: Configuration = {
     /*
      ** You can extend webpack config here
      */
+  },
+  styleResources: {
+    scss: [
+      '~/assets/scss/_variables.scss',
+      '~/assets/scss/_mixins.scss',
+      '~/assets/scss/_functions.scss',
+    ],
   },
   typescript: {
     typeCheck: {

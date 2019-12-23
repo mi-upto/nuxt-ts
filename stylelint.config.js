@@ -8,5 +8,12 @@ module.exports = {
   rules: {
     indentation: 2,
     'no-duplicate-selectors': true,
+    'rule-empty-line-before': 'always',
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['function', 'return', 'if', 'each', 'include', 'mixin'],
+      },
+    ],
   },
 };
